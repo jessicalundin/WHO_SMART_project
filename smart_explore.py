@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-WHO SMART Guidelines Access Script
+WHO SMART Guidelines: Immunization and HIV Access Script
 
 This script provides functions to access and process WHO SMART Guidelines
-using Python and the FHIR client library.
+specifically for Immunization and HIV programs using Python and the FHIR client library.
 """
 
 import requests
@@ -485,18 +485,20 @@ class SMARTGuidelinesClient:
 
 
 def main():
-    """Main function demonstrating SMART Guidelines access"""
+    """Main function demonstrating SMART Guidelines access for Immunization and HIV"""
     
-    print("WHO SMART Guidelines Explorer")
-    print("=" * 40)
+    print("WHO SMART Guidelines: Immunization and HIV Explorer")
+    print("=" * 55)
     
     # Initialize client
     smart_client = SMARTGuidelinesClient()
     
-    # Available guidelines to explore
-    guidelines = ['anc', 'base', 'immunizations', 'trust']
+    # Focus on immunization and HIV guidelines with supporting repositories
+    guidelines = ['immunizations', 'hiv', 'base']
     
-    print("\nFetching available SMART Guidelines...")
+    print("\nFetching WHO SMART Guidelines for Immunization and HIV...")
+    print("These guidelines support digital implementation of WHO recommendations")
+    print("for vaccination programs and HIV care and treatment protocols.\n")
     
     for guideline in guidelines:
         print(f"\n--- {guideline.upper()} Guideline ---")
